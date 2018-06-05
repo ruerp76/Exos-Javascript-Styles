@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <title>Styles Javascript</title>
 </head>
-    <body>
 
     <body class="main page">
+      <h1 class="toto">Exercice de style JS</h1>
+      <button class="danger" type="button" name="button">Danger</button>
     <script>
-        alert(document.body.className); // main page
+    // Exercice 1
+        var toto = document.getElementsByTagName('h1')[0].className;
+        alert(toto);
+
+      // Exercice 2
+      var danger = document.getElementsByClassName('danger')[0].addEventListener('click', (changeColor) => {
+        document.getElementsByTagName('h1')[0].style.color = "red";
+      });
+
+      // Exercice 3
+      var faitChier = document.getElementsByTagName('h1')[0].className+=" titre";
+      alert(faitChier);
+
+      var jeGalere = document.getElementsByClassName('danger')[0].addEventListener('click', (changeBackg) => {
+        document.getElementsByTagName('h1')[0].style.backgroundColor = "red";
+        document.getElementsByTagName('h1')[0].style.color = "white";
+      });
+
+      var galerePlus = document.getElementsByTagName('h1')[0].className+=" rouge";
+      alert(galerePlus);
+
+
     </script>
-    </body
-
-
-
-    </body>
+  </body>
 </html>
