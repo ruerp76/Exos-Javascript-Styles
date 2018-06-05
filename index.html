@@ -30,7 +30,7 @@
       // Exercice 4
 
       var galerePlus = document.getElementsByTagName('h1')[0].className+=" rouge";
-      alert(galerePlus);
+
 
       var galereEncorePlus = document.getElementsByTagName('h1')[0];
         for(item of galereEncorePlus.classList){
@@ -39,7 +39,28 @@
           document.body.appendChild(p);
         };
 
+        // Exercice 5
+
+        var lorem = document.createElement('p');
+        lorem.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt' +
+        'ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip' +
+        'ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat' +
+        'nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        document.body.appendChild(lorem);
+
+        var bouton = document.createElement('button');
+        bouton.innerHTML = 'afficher ou cacher';
+        document.body.appendChild(bouton);
+
+        bouton.addEventListener('click', (masquer) => {
+          if (lorem.style.visibility == 'hidden') {
+              lorem.style.visibility = 'visible';
+          }
+          else{
+            lorem.style.visibility = 'hidden';
+            lorem.style.color = "red";
+          }
+        });
 
     </script>
-  </body>
 </html>
