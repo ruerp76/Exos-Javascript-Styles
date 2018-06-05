@@ -15,7 +15,7 @@
 
       // Exercice 2
       var danger = document.getElementsByClassName('danger')[0].addEventListener('click', (changeColor) => {
-        document.getElementsByTagName('h1')[0].style.color = "red";
+        toto.style.color = "red";
       });
 
       // Exercice 3
@@ -27,8 +27,17 @@
         document.getElementsByTagName('h1')[0].style.color = "white";
       });
 
+      // Exercice 4
+
       var galerePlus = document.getElementsByTagName('h1')[0].className+=" rouge";
       alert(galerePlus);
+
+      var galereEncorePlus = document.getElementsByTagName('h1')[0];
+        for(item of galereEncorePlus.classList){
+          var p = document.createElement('p');
+          p.innerHTML = item;
+          document.body.appendChild(p);
+        };
 
 
     </script>
